@@ -1,0 +1,11 @@
+<%- include header %>
+<p><h3><a href="<%= feeds.responseData.feed.link%>"><%= feeds.responseData.feed.title%></a></h3></P>
+<% feeds.responseData.feed.entries.forEach(function(feed, index){ %>
+  <p><span><a href="<%= feed.link %>"><%= feed.title %></a></span></p>
+  <p class="info">
+    Author：<a href="#"><%= feed.author %></a> |
+    PostDate：<%= feed.publishedDate %>
+  </p>
+  <p><%- feed.content %></p>
+<% }) %>
+<%- include footer %>
