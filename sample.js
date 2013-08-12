@@ -14,7 +14,7 @@ http.createServer(function (req, res) {
 	request(findFeedURL, function (err, response, data) {
 		if(!err && response.statusCode == 200){
 			res.writeHead(200, {"Content-Type": "text/html;charset=utf-8"});
-			
+
 			var body = JSON.parse(data.toString());
 			res.write(body.responseData.query + '<p/>');
 			for (var i = 0; i < body.responseData.entries.length; i++) {

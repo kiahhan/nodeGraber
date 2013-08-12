@@ -5,6 +5,10 @@ module.exports = function (app){
     res.render('index', { title: 'Node Graber' });
   });
 
+  app.get('/sample',function (req, res){
+    res.render('sample', { title: 'Node Graber' });
+  });
+
   app.get('/find', function (req, res){
   	res.render('find', { title: 'Find Keyword'});
   });
